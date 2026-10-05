@@ -1,0 +1,902 @@
+[
+ {
+  "designation": "625",
+  "d": 5,
+  "D": 16,
+  "B": 5,
+  "Co": 380,
+  "C": "",
+  "source": "Original sheet"
+ },
+ {
+  "designation": "635",
+  "d": 5,
+  "D": 19,
+  "B": 6,
+  "Co": 950,
+  "C": "",
+  "source": "Original sheet"
+ },
+ {
+  "designation": "626",
+  "d": 6,
+  "D": 19,
+  "B": 6,
+  "Co": 950,
+  "C": "",
+  "source": "Original sheet"
+ },
+ {
+  "designation": "607",
+  "d": 7,
+  "D": 19,
+  "B": 6,
+  "Co": 950,
+  "C": "",
+  "source": "Original sheet"
+ },
+ {
+  "designation": "627",
+  "d": 7,
+  "D": 22,
+  "B": 7,
+  "Co": 1370,
+  "C": "",
+  "source": "Original sheet"
+ },
+ {
+  "designation": "608",
+  "d": 8,
+  "D": 22,
+  "B": 7,
+  "Co": 1370,
+  "C": "",
+  "source": "Original sheet"
+ },
+ {
+  "designation": "628",
+  "d": 8,
+  "D": 24,
+  "B": 8,
+  "Co": 1660,
+  "C": "",
+  "source": "Original sheet"
+ },
+ {
+  "designation": "609",
+  "d": 9,
+  "D": 24,
+  "B": 7,
+  "Co": 1660,
+  "C": "",
+  "source": "Original sheet"
+ },
+ {
+  "designation": "629",
+  "d": 9,
+  "D": 26,
+  "B": 8,
+  "Co": 1960,
+  "C": "",
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6000",
+  "d": 10,
+  "D": 26,
+  "B": 8,
+  "Co": 1960,
+  "C": 4550,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6200",
+  "d": 10,
+  "D": 30,
+  "B": 9,
+  "Co": 2360,
+  "C": 5070,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6300",
+  "d": 10,
+  "D": 35,
+  "B": 11,
+  "Co": 3400,
+  "C": 8060,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6001",
+  "d": 12,
+  "D": 28,
+  "B": 8,
+  "Co": 2360,
+  "C": 5100,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6201",
+  "d": 12,
+  "D": 32,
+  "B": 10,
+  "Co": 3100,
+  "C": 6890,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6301",
+  "d": 12,
+  "D": 37,
+  "B": 12,
+  "Co": 4150,
+  "C": 9650,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6002",
+  "d": 15,
+  "D": 32,
+  "B": 9,
+  "Co": 2850,
+  "C": 5600,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6202",
+  "d": 15,
+  "D": 35,
+  "B": 11,
+  "Co": 3750,
+  "C": 7800,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6302",
+  "d": 15,
+  "D": 42,
+  "B": 13,
+  "Co": 5400,
+  "C": 11400,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6003",
+  "d": 17,
+  "D": 35,
+  "B": 10,
+  "Co": 3250,
+  "C": 6000,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6203",
+  "d": 17,
+  "D": 40,
+  "B": 12,
+  "Co": 4750,
+  "C": 9500,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6303",
+  "d": 17,
+  "D": 47,
+  "B": 14,
+  "Co": 6550,
+  "C": 13400,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6403",
+  "d": 17,
+  "D": 62,
+  "B": 17,
+  "Co": 11400,
+  "C": 22400,
+  "source": "PTI"
+ },
+ {
+  "designation": "6004",
+  "d": 20,
+  "D": 42,
+  "B": 12,
+  "Co": 5000,
+  "C": 9300,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6204",
+  "d": 20,
+  "D": 47,
+  "B": 14,
+  "Co": 6550,
+  "C": 12700,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6304",
+  "d": 20,
+  "D": 52,
+  "B": 15,
+  "Co": 7800,
+  "C": 15900,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6404",
+  "d": 20,
+  "D": 72,
+  "B": 19,
+  "Co": 16300,
+  "C": 29000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6005",
+  "d": 25,
+  "D": 47,
+  "B": 12,
+  "Co": 6550,
+  "C": 10000,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6205",
+  "d": 25,
+  "D": 52,
+  "B": 15,
+  "Co": 9800,
+  "C": 14000,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6305",
+  "d": 25,
+  "D": 62,
+  "B": 17,
+  "Co": 11600,
+  "C": 22400,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6405",
+  "d": 25,
+  "D": 80,
+  "B": 21,
+  "Co": 19000,
+  "C": 33500,
+  "source": "PTI"
+ },
+ {
+  "designation": "6006",
+  "d": 30,
+  "D": 55,
+  "B": 13,
+  "Co": 8300,
+  "C": 12700,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6206",
+  "d": 30,
+  "D": 62,
+  "B": 16,
+  "Co": 11200,
+  "C": 19300,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6306",
+  "d": 30,
+  "D": 72,
+  "B": 19,
+  "Co": 16000,
+  "C": 28100,
+  "source": "Original sheet"
+ },
+ {
+  "designation": "6406",
+  "d": 30,
+  "D": 90,
+  "B": 23,
+  "Co": 25000,
+  "C": 42500,
+  "source": "PTI"
+ },
+ {
+  "designation": "6007",
+  "d": 35,
+  "D": 62,
+  "B": 14,
+  "Co": 10200,
+  "C": 16000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6207",
+  "d": 35,
+  "D": 72,
+  "B": 17,
+  "Co": 12000,
+  "C": 25500,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6307",
+  "d": 35,
+  "D": 80,
+  "B": 21,
+  "Co": 19000,
+  "C": 33200,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6407",
+  "d": 35,
+  "D": 100,
+  "B": 25,
+  "Co": 31500,
+  "C": 53000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6008",
+  "d": 40,
+  "D": 68,
+  "B": 15,
+  "Co": 11600,
+  "C": 16600,
+  "source": "PTI"
+ },
+ {
+  "designation": "6208",
+  "d": 40,
+  "D": 80,
+  "B": 18,
+  "Co": 18000,
+  "C": 29000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6308",
+  "d": 40,
+  "D": 90,
+  "B": 23,
+  "Co": 24000,
+  "C": 41000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6408",
+  "d": 40,
+  "D": 110,
+  "B": 27,
+  "Co": 38000,
+  "C": 62000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6009",
+  "d": 45,
+  "D": 75,
+  "B": 16,
+  "Co": 14300,
+  "C": 20000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6209",
+  "d": 45,
+  "D": 85,
+  "B": 19,
+  "Co": 20400,
+  "C": 31000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6309",
+  "d": 45,
+  "D": 100,
+  "B": 25,
+  "Co": 31500,
+  "C": 52700,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6409",
+  "d": 45,
+  "D": 120,
+  "B": 29,
+  "Co": 47500,
+  "C": 76500,
+  "source": "PTI"
+ },
+ {
+  "designation": "6010",
+  "d": 50,
+  "D": 80,
+  "B": 16,
+  "Co": 15600,
+  "C": 20800,
+  "source": "PTI"
+ },
+ {
+  "designation": "6210",
+  "d": 50,
+  "D": 90,
+  "B": 20,
+  "Co": 23200,
+  "C": 35100,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6310",
+  "d": 50,
+  "D": 110,
+  "B": 27,
+  "Co": 38000,
+  "C": 61800,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6410",
+  "d": 50,
+  "D": 130,
+  "B": 31,
+  "Co": 52000,
+  "C": 81500,
+  "source": "PTI"
+ },
+ {
+  "designation": "6011",
+  "d": 55,
+  "D": 90,
+  "B": 18,
+  "Co": 21200,
+  "C": 28500,
+  "source": "PTI"
+ },
+ {
+  "designation": "6211",
+  "d": 55,
+  "D": 100,
+  "B": 21,
+  "Co": 29000,
+  "C": 43000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6311",
+  "d": 55,
+  "D": 120,
+  "B": 29,
+  "Co": 45000,
+  "C": 71500,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6411",
+  "d": 55,
+  "D": 140,
+  "B": 33,
+  "Co": 60000,
+  "C": 93000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6012",
+  "d": 60,
+  "D": 95,
+  "B": 18,
+  "Co": 23200,
+  "C": 29000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6212",
+  "d": 60,
+  "D": 110,
+  "B": 22,
+  "Co": 36000,
+  "C": 52000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6312",
+  "d": 60,
+  "D": 130,
+  "B": 31,
+  "Co": 52000,
+  "C": 81500,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6412",
+  "d": 60,
+  "D": 150,
+  "B": 35,
+  "Co": 68000,
+  "C": 104000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6013",
+  "d": 65,
+  "D": 100,
+  "B": 18,
+  "Co": 25000,
+  "C": 30500,
+  "source": "PTI"
+ },
+ {
+  "designation": "6213",
+  "d": 65,
+  "D": 120,
+  "B": 23,
+  "Co": 40500,
+  "C": 55900,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6313",
+  "d": 65,
+  "D": 140,
+  "B": 33,
+  "Co": 60000,
+  "C": 92300,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6413",
+  "d": 65,
+  "D": 160,
+  "B": 37,
+  "Co": 76500,
+  "C": 114000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6014",
+  "d": 70,
+  "D": 110,
+  "B": 20,
+  "Co": 31000,
+  "C": 38000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6214",
+  "d": 70,
+  "D": 125,
+  "B": 24,
+  "Co": 44000,
+  "C": 60500,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6314",
+  "d": 70,
+  "D": 150,
+  "B": 35,
+  "Co": 68000,
+  "C": 104000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6414",
+  "d": 70,
+  "D": 180,
+  "B": 42,
+  "Co": 96500,
+  "C": 132000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6015",
+  "d": 75,
+  "D": 115,
+  "B": 20,
+  "Co": 33500,
+  "C": 39000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6215",
+  "d": 75,
+  "D": 130,
+  "B": 25,
+  "Co": 49000,
+  "C": 65500,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6315",
+  "d": 75,
+  "D": 160,
+  "B": 37,
+  "Co": 76500,
+  "C": 114000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6415",
+  "d": 75,
+  "D": 190,
+  "B": 45,
+  "Co": 96500,
+  "C": 132000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6016",
+  "d": 80,
+  "D": 125,
+  "B": 22,
+  "Co": 40000,
+  "C": 47500,
+  "source": "PTI"
+ },
+ {
+  "designation": "6216",
+  "d": 80,
+  "D": 140,
+  "B": 26,
+  "Co": 54000,
+  "C": 70200,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6316",
+  "d": 80,
+  "D": 170,
+  "B": 39,
+  "Co": 86500,
+  "C": 122000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6416",
+  "d": 80,
+  "D": 200,
+  "B": 48,
+  "Co": 125000,
+  "C": 163000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6017",
+  "d": 85,
+  "D": 130,
+  "B": 22,
+  "Co": 43000,
+  "C": 49000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6217",
+  "d": 85,
+  "D": 150,
+  "B": 28,
+  "Co": 64000,
+  "C": 83000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6317",
+  "d": 85,
+  "D": 180,
+  "B": 41,
+  "Co": 96500,
+  "C": 132000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6417",
+  "d": 85,
+  "D": 210,
+  "B": 52,
+  "Co": 137000,
+  "C": 173000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6018",
+  "d": 90,
+  "D": 140,
+  "B": 24,
+  "Co": 50000,
+  "C": 58500,
+  "source": "PTI"
+ },
+ {
+  "designation": "6218",
+  "d": 90,
+  "D": 160,
+  "B": 30,
+  "Co": 72000,
+  "C": 95600,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6318",
+  "d": 90,
+  "D": 190,
+  "B": 43,
+  "Co": 102000,
+  "C": 134000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6418",
+  "d": 90,
+  "D": 225,
+  "B": 54,
+  "Co": 163000,
+  "C": 196000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6019",
+  "d": 95,
+  "D": 145,
+  "B": 24,
+  "Co": 54000,
+  "C": 60000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6219",
+  "d": 95,
+  "D": 170,
+  "B": 32,
+  "Co": 81500,
+  "C": 108000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6319",
+  "d": 95,
+  "D": 200,
+  "B": 45,
+  "Co": 114000,
+  "C": 146000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6020",
+  "d": 100,
+  "D": 150,
+  "B": 24,
+  "Co": 54000,
+  "C": 60000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6220",
+  "d": 100,
+  "D": 180,
+  "B": 34,
+  "Co": 93000,
+  "C": 122000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6320",
+  "d": 100,
+  "D": 215,
+  "B": 47,
+  "Co": 134000,
+  "C": 163000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6021",
+  "d": 105,
+  "D": 160,
+  "B": 26,
+  "Co": 64000,
+  "C": 71000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6221",
+  "d": 105,
+  "D": 190,
+  "B": 36,
+  "Co": 104000,
+  "C": 132000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6321",
+  "d": 105,
+  "D": 225,
+  "B": 49,
+  "Co": 146000,
+  "C": 173000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6022",
+  "d": 110,
+  "D": 170,
+  "B": 28,
+  "Co": 71000,
+  "C": 80000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6222",
+  "d": 110,
+  "D": 200,
+  "B": 38,
+  "Co": 116000,
+  "C": 143000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6322",
+  "d": 110,
+  "D": 240,
+  "B": 50,
+  "Co": 166000,
+  "C": 190000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6024",
+  "d": 120,
+  "D": 180,
+  "B": 28,
+  "Co": 78000,
+  "C": 83000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6224",
+  "d": 120,
+  "D": 215,
+  "B": 40,
+  "Co": 118000,
+  "C": 146000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6324",
+  "d": 120,
+  "D": 260,
+  "B": 55,
+  "Co": 186000,
+  "C": 208000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6026",
+  "d": 130,
+  "D": 200,
+  "B": 33,
+  "Co": 100000,
+  "C": 106000,
+  "source": "PTI"
+ },
+ {
+  "designation": "6226",
+  "d": 130,
+  "D": 230,
+  "B": 40,
+  "Co": 132000,
+  "C": 156000,
+  "source": "TFL / PTI"
+ },
+ {
+  "designation": "6326",
+  "d": 130,
+  "D": 280,
+  "B": 58,
+  "Co": 216000,
+  "C": 228000,
+  "source": "TFL / PTI"
+ }
+]

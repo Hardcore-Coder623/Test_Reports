@@ -1,0 +1,17 @@
+[
+ {
+  "material": "Carbon",
+  "pv_imperial": 200000,
+  "source": "OWK22 / 1HP / 0.5HP sheets, Table1 I35:J35"
+ },
+ {
+  "material": "Bronze",
+  "pv_imperial": 75000,
+  "source": "Bunting C93200 chart (OWK22 sheet uses 125000)"
+ },
+ {
+  "material": "AMCO",
+  "pv_imperial": 93304.848,
+  "source": "J30:K31 - 2000 kg/cm²·m/min"
+ }
+]

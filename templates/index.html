@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pump Design Calculator</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">⚙</span>
+    <div>
+      <h1>Pump Design Calculator</h1>
+      <p>Ball bearing selection &amp; bush PV check</p>
+    </div>
+  </div>
+  <button class="btn ghost" onclick="window.print()">Print / Save PDF</button>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab active" data-tab="bearing" role="tab">Ball Bearing</button>
+  <button class="tab" data-tab="bush" role="tab">Bush Design</button>
+  <button class="tab" data-tab="impeller" role="tab">Impeller Design</button>
+  <button class="tab" data-tab="volute" role="tab">Volute Design</button>
+  <button class="tab" data-tab="master" role="tab">Master</button>
+  <button class="tab" data-tab="report" role="tab">Test Report</button>
+  <button class="tab" data-tab="trim" role="tab">Impeller Trim</button>
+  <button class="tab" data-tab="masters" role="tab">Masters</button>
+</nav>
+
+<main>
+  <!-- ===================== BALL BEARING ===================== -->
+  <section id="tab-bearing" class="panel active">
+    <div class="card diagram-card">
+      <div class="diagram-head">
+        <h2>Shaft layout</h2>
+        <span class="muted">Enter a, b and c on the drawing (mm)</span>
+      </div>
+      <div class="diagram" id="shaft-diagram">
+        <svg viewBox="0 0 1000 340" role="img" aria-label="Shaft with bearing A, load P1, bearing B and overhung load P2">
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" class="ah"/>
+            </marker>
+            <marker id="arrLoad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,0 L10,5 L0,10 z" class="ah-load"/>
+            </marker>
+            <marker id="arrReact" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,0 L10,5 L0,10 z" class="ah-react"/>
+            </marker>
+          </defs>
+
+          <!-- extension lines -->
+          <g class="ext">
+            <line x1="100" y1="64" x2="100" y2="168"/>
+            <line x1="480" y1="64" x2="480" y2="96"/>
+            <line x1="720" y1="64" x2="720" y2="168"/>
+            <line x1="900" y1="64" x2="900" y2="96"/>
+            <line x1="100" y1="212" x2="100" y2="306"/>
+            <line x1="720" y1="212" x2="720" y2="306"/>
+          </g>
+
+          <!-- dimension lines a / b / c -->
+          <g class="dim">
+            <line x1="100" y1="80" x2="480" y2="80" marker-start="url(#arr)" marker-end="url(#arr)"/>
+            <line x1="480" y1="80" x2="720" y2="80" marker-start="url(#arr)" marker-end="url(#arr)"/>
+            <line x1="720" y1="80" x2="900" y2="80" marker-start="url(#arr)" marker-end="url(#arr)"/>
+            <line x1="100" y1="296" x2="720" y2="296" marker-start="url(#arr)" marker-end="url(#arr)"/>
+          </g>
+
+          <!-- shaft -->
+          <line class="shaft" x1="40" y1="190" x2="970" y2="190"/>
+          <line class="shaft-c" x1="30" y1="190" x2="980" y2="190"/>
+
+          <!-- loads -->
+          <g class="load">
+            <line x1="480" y1="100" x2="480" y2="180" marker-end="url(#arrLoad)"/>
+            <line x1="900" y1="100" x2="900" y2="180" marker-end="url(#arrLoad)"/>
+          </g>
+          <text x="480" y="26" class="lbl-load">P1</text>
+          <text x="480" y="50" class="val" id="dg-p1">–</text>
+          <text x="900" y="26" class="lbl-load">P2</text>
+          <text x="900" y="50" class="val" id="dg-p2">–</text>
+
+          <!-- bearings -->
+          <g class="brg">
+            <rect x="80" y="170" width="40" height="40"/><path d="M80,170 L120,210 M120,170 L80,210"/>
+            <rect x="700" y="170" width="40" height="40"/><path d="M700,170 L740,210 M740,170 L700,210"/>
+          </g>
+          <text x="128" y="164" class="lbl-brg start">Brg. A</text>
+          <text x="748" y="164" class="lbl-brg start">Brg. B</text>
+
+          <!-- reactions -->
+          <g class="react">
+            <line x1="100" y1="262" x2="100" y2="218" marker-end="url(#arrReact)"/>
+            <line x1="720" y1="262" x2="720" y2="218" marker-end="url(#arrReact)"/>
+          </g>
+          <text x="112" y="250" class="val-react start" id="dg-ra">RA –</text>
+          <text x="732" y="250" class="val-react start" id="dg-rb">RB –</text>
+
+          <text x="410" y="326" class="val" id="dg-span">k = a + b</text>
+        </svg>
+
+        <!-- inputs placed on the dimension lines -->
+        <label class="dim-in" style="left:29%;top:23.5%"><span>a</span>
+          <input data-link="a" type="number" step="any" min="0"><em>mm</em></label>
+        <label class="dim-in" style="left:60%;top:23.5%"><span>b</span>
+          <input data-link="b" type="number" step="any" min="0"><em>mm</em></label>
+        <label class="dim-in" style="left:81%;top:23.5%"><span>c</span>
+          <input data-link="c" type="number" step="any" min="0"><em>mm</em></label>
+      </div>
+    </div>
+
+    <div class="grid">
+      <form id="bearing-form" class="card inputs" autocomplete="off">
+        <h2>Pump data</h2>
+        <div class="fields">
+          <label>Motor power<span class="u">HP</span><input name="hp" type="number" step="any" min="0" list="hp-list" placeholder="Select or type"></label>
+          <datalist id="hp-list"></datalist>
+          <label>Speed<span class="u">RPM</span><input name="rpm" type="number" step="any"></label>
+          <label>d<span class="u">factor</span><input name="d" type="number" step="any"></label>
+          <label>k<span class="u">factor</span><input name="k" type="number" step="any"></label>
+          <label>a · Brg A → P1<span class="u">mm</span><input name="a" data-link="a" type="number" step="any" min="0"></label>
+          <label>b · P1 → Brg B<span class="u">mm</span><input name="b" data-link="b" type="number" step="any" min="0"></label>
+          <label>c · Brg B → P2<span class="u">mm</span><input name="c" data-link="c" type="number" step="any" min="0"></label>
+          <label>Shaft dia (torque)<span class="u">mm</span><input name="shaft_dia" type="number" step="any"></label>
+        </div>
+
+        <h2>Selection</h2>
+
+        <div class="bearing-pick">
+          <div class="pick-head">Bearing A <span class="muted">(impeller side)</span></div>
+          <div class="row2">
+            <label>Shaft bore (mm)<select id="bore_a"></select></label>
+            <label>Bearing<select name="bearing_a" id="bearing_a"></select></label>
+          </div>
+          <label class="qty">Qty<input name="qty_a" type="number" min="1" step="1"></label>
+        </div>
+
+        <div class="bearing-pick">
+          <div class="pick-head">Bearing B <span class="muted">(drive side)</span></div>
+          <div class="row2">
+            <label>Shaft bore (mm)<select id="bore_b"></select></label>
+            <label>Bearing<select name="bearing_b" id="bearing_b"></select></label>
+          </div>
+          <label class="qty">Qty<input name="qty_b" type="number" min="1" step="1"></label>
+        </div>
+        <button type="button" class="btn ghost small" id="bearing-reset">Reset to sheet values</button>
+      </form>
+
+      <div class="card results" id="bearing-results">
+        <h2>Results</h2>
+        <div class="placeholder">Calculating…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BUSH ===================== -->
+  <section id="tab-bush" class="panel">
+    <div class="grid">
+      <form id="bush-form" class="card inputs" autocomplete="off">
+        <h2>Selection</h2>
+        <div class="row2">
+          <label>Pump model<select name="model" id="model"></select></label>
+          <label>Bush material<select name="material" id="material"></select></label>
+        </div>
+        <label class="wide">PV limit<span class="u">lb/in² × ft/min</span><input name="pv_limit" type="number" step="any"></label>
+
+        <h2>Design data <span class="muted">(pre-filled from model, editable)</span></h2>
+        <div class="fields">
+          <label>Impeller OD<span class="u">mm</span><input name="impeller_od" type="number" step="any"></label>
+          <label>Vane width incl. shroud<span class="u">mm</span><input name="vane_width" type="number" step="any"></label>
+          <label>Shut-off head<span class="u">m</span><input name="head" type="number" step="any"></label>
+          <label>Discharge<span class="u">m³/h</span><input name="discharge_m3h" type="number" step="any"></label>
+          <label>Speed<span class="u">RPM</span><input name="speed" type="number" step="any"></label>
+          <label>Kso<span class="u">–</span><input name="kso" type="number" step="any"></label>
+          <label>Specific gravity<span class="u">–</span><input name="sg" type="number" step="any"></label>
+          <label>Rotor weight<span class="u">kg</span><input name="rotor_wt" type="number" step="any"></label>
+          <label>Impeller weight<span class="u">kg</span><input name="impeller_wt" type="number" step="any"></label>
+          <label>A (impeller → bush A)<span class="u">mm</span><input name="dim_a" type="number" step="any"></label>
+          <label>B (bush A → bush B)<span class="u">mm</span><input name="dim_b" type="number" step="any"></label>
+          <label>Bush A dia<span class="u">mm</span><input name="bush_a_dia" type="number" step="any"></label>
+          <label>Bush A length<span class="u">mm</span><input name="bush_a_len" type="number" step="any"></label>
+          <label>Bush B dia<span class="u">mm</span><input name="bush_b_dia" type="number" step="any"></label>
+          <label>Bush B length<span class="u">mm</span><input name="bush_b_len" type="number" step="any"></label>
+        </div>
+        <button type="button" class="btn ghost small" id="bush-reset">Reset to model values</button>
+
+        <details class="figure">
+          <summary>Show layout (A, B dimensions)</summary>
+          <img src="{{ url_for('static', filename='bush_layout.png') }}" alt="Rotor layout showing dimensions A and B">
+          <p class="muted">In place of ball bearings, the pump has bushes and thrust bearings.</p>
+        </details>
+      </form>
+
+      <div class="card results" id="bush-results">
+        <h2>Results</h2>
+        <div class="placeholder">Calculating…</div>
+      </div>
+    </div>
+  </section>
+  <!-- ===================== IMPELLER ===================== -->
+  <section id="tab-impeller" class="panel">
+    <div class="grid imp-grid">
+      <form id="imp-form" class="card inputs" autocomplete="off">
+        <div id="imp-fields"></div>
+        <button type="button" class="btn ghost small" id="imp-reset">Reset to sheet values</button>
+      </form>
+      <div class="card results" id="imp-results">
+        <h2>Results</h2>
+        <div class="placeholder">Calculating…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VOLUTE ===================== -->
+  <section id="tab-volute" class="panel">
+    <div class="grid imp-grid">
+      <form id="vol-form" class="card inputs" autocomplete="off">
+        <h2>Pump duty <span class="muted">(from Impeller Design)</span></h2>
+        <div id="vol-duty" class="duty-strip"></div>
+        <div id="vol-fields"></div>
+        <button type="button" class="btn ghost small" id="vol-reset">Reset to sheet values</button>
+      </form>
+      <div class="card results" id="vol-results">
+        <h2>Results</h2>
+        <div class="placeholder">Calculating…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MASTER ===================== -->
+  <section id="tab-master" class="panel">
+    <div class="card results" id="master-results">
+      <h2>Master</h2>
+      <div class="placeholder">Calculating…</div>
+    </div>
+  </section>
+  <!-- ===================== PUMP TEST REPORT ===================== -->
+  <section id="tab-report" class="panel">
+    <form id="rep-form" autocomplete="off" onsubmit="return false">
+      <div class="card rep-card">
+        <div class="rep-head">
+          <h2>Name Plate Data</h2>
+          <div class="rep-btns">
+            <button type="button" class="btn small" id="rep-dl-np">Download Nameplate</button>
+            <button type="button" class="btn ghost small" id="rep-up-np">Upload Nameplate</button>
+          </div>
+        </div>
+        <div id="rep-np" class="rep-np"></div>
+        <div class="rep-msg" id="rep-np-msg"></div>
+      </div>
+
+      <div class="card rep-card">
+        <div class="rep-head">
+          <h2>Observed Parameters</h2>
+          <div class="rep-btns">
+            <button type="button" class="btn small" id="rep-dl-rd">Download Readings</button>
+            <button type="button" class="btn ghost small" id="rep-up-rd">Upload Readings</button>
+            <button type="button" class="btn ghost small" id="rep-clear">Clear readings</button>
+          </div>
+        </div>
+        <div class="tbl-wrap"><table class="tbl rep-in" id="rep-readings"></table></div>
+        <div class="rep-msg" id="rep-rd-msg"></div>
+      </div>
+    </form>
+
+    <div class="card results" id="rep-results">
+      <h2>Results</h2>
+      <div class="placeholder">Enter nameplate and at least 3 readings.</div>
+    </div>
+  </section>
+  <!-- ===================== IMPELLER TRIM ===================== -->
+  <section id="tab-trim" class="panel">
+    <div class="grid imp-grid">
+      <form id="trim-form" class="card inputs" autocomplete="off" onsubmit="return false">
+        <h2>Impeller diameters</h2>
+        <div class="row2">
+          <label>Test curve diameter D1<span class="u">mm</span><input name="d1" type="number" step="any"></label>
+          <label>New diameter D2<span class="u">mm</span><input name="d2" type="number" step="any"></label>
+        </div>
+        <label class="wide">Units<select name="units" id="trim-units"></select></label>
+        <h2>Test curve points</h2>
+        <div class="tbl-wrap"><table class="tbl rep-in" id="trim-points"></table></div>
+        <p class="foot">Up to 8 points; leave unused rows blank. Efficiency is used for the power only.</p>
+        <div class="rep-btns">
+          <button type="button" class="btn ghost small" id="trim-load">Load from Test Report</button>
+          <button type="button" class="btn ghost small" id="trim-reset">Reset to sheet values</button>
+        </div>
+        <div class="rep-msg" id="trim-msg"></div>
+      </form>
+      <div class="card results" id="trim-results">
+        <h2>Results</h2>
+        <div class="placeholder">Calculating…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MASTER DATA SHEETS ===================== -->
+  <section id="tab-masters" class="panel">
+    <div class="card">
+      <div class="rep-head"><h2>Master data sheets</h2></div>
+      <div class="chips" id="mst-chips" role="tablist"></div>
+      <div class="mst-head"><h3 id="mst-title"></h3><span class="muted" id="mst-source"></span></div>
+      <div id="mst-body"></div>
+      <div class="rep-msg" id="mst-msg"></div>
+    </div>
+  </section>
+</main>
+
+<footer>All calculations are performed on the server. Values shown are results only.</footer>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+<script src="{{ url_for('static', filename='impeller.js') }}"></script>
+<script src="{{ url_for('static', filename='report.js') }}"></script>
+<script src="{{ url_for('static', filename='masters.js') }}"></script>
+<script src="{{ url_for('static', filename='trim.js') }}"></script>
+</body>
+</html>
